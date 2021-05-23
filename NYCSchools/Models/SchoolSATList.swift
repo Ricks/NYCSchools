@@ -1,13 +1,13 @@
 //
-//  SchoolModel.swift
+//  SchoolSATList.swift
 //  NYCSchools
 //
-//  Created by Richard Clark on 5/21/21.
+//  Created by Richard Clark on 5/23/21.
 //
 
 import Foundation
 
-class SchoolList: Decodable {
+class SchoolSATList: Decodable {
     var schools = [School]()
 
     enum CodingKeys: String, CodingKey {
@@ -24,14 +24,18 @@ class SchoolList: Decodable {
                 switch schoolDataContainer.currentIndex {
                 case 8:
                     school.dbn = try schoolDataContainer.decode(String.self)
-                case 9:
-                    school.name = try schoolDataContainer.decode(String.self)
                 case 10:
-                    school.boro = try schoolDataContainer.decode(String.self)
-                case 22:
-                    school.neighborhood = try schoolDataContainer.decode(String.self)
-                case 30:
-                    school.urlString = try schoolDataContainer.decode(String.self)
+                    let numSATTestTakersStr = try schoolDataContainer.decode(String.self)
+                    school.numSATTestTakers = Int(numSATTestTakersStr) ?? 0
+                case 11:
+                    let avgSATCriticalReadingScoreStr = try schoolDataContainer.decode(String.self)
+                    school.avgSATCriticalReadingScore = Int(avgSATCriticalReadingScoreStr) ?? 0
+                case 12:
+                    let avgSATMathScoreStr = try schoolDataContainer.decode(String.self)
+                    school.avgSATMathScore = Int(avgSATMathScoreStr) ?? 0
+                case 13:
+                    let avgSATWritingScoreStr = try schoolDataContainer.decode(String.self)
+                    school.avgSATWritingScore = Int(avgSATWritingScoreStr) ?? 0
                     break loop
                 default:
                     _ = try? schoolDataContainer.decode(DummyCodable.self)

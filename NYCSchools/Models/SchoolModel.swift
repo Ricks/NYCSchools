@@ -8,21 +8,51 @@
 import Foundation
 
 class SchoolModel {
-    let schools: [School]
+    var schools: [School]
 
     init() {
-        guard let file = Bundle.main.url(forResource: "School_data", withExtension: "json") else {
+        let decoder = JSONDecoder()
+
+        // Read the school list
+
+        guard let schoolFile = Bundle.main.url(forResource: "School_data", withExtension: "json") else {
             fatalError("No file School_data.json in bundle")
         }
-        let res1 = Result { try Data(contentsOf: file) }
-        guard let jsonData = res1.success else {
-            fatalError("Could not load file School_data.json: \(String(describing: res1.failure))")
+        let schoolRes1 = Result { try Data(contentsOf: schoolFile) }
+        guard let jsonSchoolData = schoolRes1.success else {
+            fatalError("Could not load file School_data.json: \(String(describing: schoolRes1.failure))")
         }
-        let decoder = JSONDecoder()
-        let res2 = Result { try decoder.decode(SchoolList.self, from: jsonData) }
-        guard let schoolList = res2.success else {
-            fatalError("Could not decode file School_data.json: \(String(describing: res2.failure))")
+        let schoolRes2 = Result { try decoder.decode(SchoolList.self, from: jsonSchoolData) }
+        guard let schoolList = schoolRes2.success else {
+            fatalError("Could not decode file School_data.json: \(String(describing: schoolRes2.failure))")
         }
+
+        // Read the school SAT list
+
+        guard let schoolSATFile = Bundle.main.url(forResource: "SAT_data", withExtension: "json") else {
+            fatalError("No file SAT_data.json in bundle")
+        }
+        let schoolSATRes1 = Result { try Data(contentsOf: schoolSATFile) }
+        guard let jsonSchoolSATData = schoolSATRes1.success else {
+            fatalError("Could not load file SAT_data.json: \(String(describing: schoolSATRes1.failure))")
+        }
+        let schoolSATRes2 = Result { try decoder.decode(SchoolSATList.self, from: jsonSchoolSATData) }
+        guard let schoolSATList = schoolSATRes2.success else {
+            fatalError("Could not decode file SAT_data.json: \(String(describing: schoolSATRes2.failure))")
+        }
+
+        // Weave the two lists
+
         schools = schoolList.schools
+        var schoolSATDict = [String: School]()
+        for school in schoolSATList.schools {
+            schoolSATDict[school.dbn] = school
+        }
+        for i in 0 ..< schools.count {
+            schools[i].numSATTestTakers = schoolSATDict[schools[i].dbn]?.numSATTestTakers ?? 0
+            schools[i].avgSATCriticalReadingScore = schoolSATDict[schools[i].dbn]?.avgSATCriticalReadingScore ?? 0
+            schools[i].avgSATWritingScore = schoolSATDict[schools[i].dbn]?.avgSATWritingScore ?? 0
+            schools[i].avgSATMathScore = schoolSATDict[schools[i].dbn]?.avgSATMathScore ?? 0
+        }
     }
 }

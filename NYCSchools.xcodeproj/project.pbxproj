@@ -19,6 +19,8 @@
 		1D1F2F272658504900FAA85C /* School_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D1F2F262658504900FAA85C /* School_data.json */; };
 		1D1F2F2D265858E900FAA85C /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1F2F2C265858E900FAA85C /* Result+Extensions.swift */; };
 		1D1F2F32265ABE6B00FAA85C /* SchoolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1F2F31265ABE6B00FAA85C /* SchoolModel.swift */; };
+		1D2CB41F265AD80B002D6C72 /* DummyCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CB41E265AD80B002D6C72 /* DummyCodable.swift */; };
+		1D2CB422265AD853002D6C72 /* SchoolSATList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CB421265AD853002D6C72 /* SchoolSATList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		1D1F2F262658504900FAA85C /* School_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = School_data.json; sourceTree = "<group>"; };
 		1D1F2F2C265858E900FAA85C /* Result+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Result+Extensions.swift"; sourceTree = "<group>"; };
 		1D1F2F31265ABE6B00FAA85C /* SchoolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolModel.swift; sourceTree = "<group>"; };
+		1D2CB41E265AD80B002D6C72 /* DummyCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyCodable.swift; sourceTree = "<group>"; };
+		1D2CB421265AD853002D6C72 /* SchoolSATList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolSATList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 			children = (
 				1D1F2F132658489900FAA85C /* School.swift */,
 				1D1F2F1C26584DA300FAA85C /* SchoolList.swift */,
+				1D2CB421265AD853002D6C72 /* SchoolSATList.swift */,
 				1D1F2F31265ABE6B00FAA85C /* SchoolModel.swift */,
 			);
 			path = Models;
@@ -90,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				1D1F2F2C265858E900FAA85C /* Result+Extensions.swift */,
+				1D2CB41E265AD80B002D6C72 /* DummyCodable.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -192,6 +198,8 @@
 				1D1F2F2D265858E900FAA85C /* Result+Extensions.swift in Sources */,
 				1D1F2F022658329D00FAA85C /* ViewController.swift in Sources */,
 				1D1F2EFE2658329D00FAA85C /* AppDelegate.swift in Sources */,
+				1D2CB41F265AD80B002D6C72 /* DummyCodable.swift in Sources */,
+				1D2CB422265AD853002D6C72 /* SchoolSATList.swift in Sources */,
 				1D1F2F002658329D00FAA85C /* SceneDelegate.swift in Sources */,
 				1D1F2F32265ABE6B00FAA85C /* SchoolModel.swift in Sources */,
 				1D1F2F1D26584DA300FAA85C /* SchoolList.swift in Sources */,
