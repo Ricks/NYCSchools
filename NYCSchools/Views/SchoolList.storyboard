@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--School List Controller-->
+        <scene sceneID="g4i-IQ-cgD">
+            <objects>
+                <tableViewController storyboardIdentifier="SchoolListController" id="WMV-FK-0rj" customClass="SchoolListController" customModule="NYCSchools" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wuy-FC-BIv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SchoolTableViewCell" id="KGU-lq-uKM" customClass="SchoolTableViewCell" customModule="NYCSchools" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KGU-lq-uKM" id="biG-Sy-of6">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="School Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgN-gq-lw9">
+                                            <rect key="frame" x="10" y="11.5" width="165.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neighborhood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I03-5d-OPe">
+                                            <rect key="frame" x="278.5" y="11.5" width="125.5" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Borough" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcn-Vf-8Gd">
+                                            <rect key="frame" x="185.5" y="11.5" width="83" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="fgN-gq-lw9" firstAttribute="leading" secondItem="biG-Sy-of6" secondAttribute="leading" constant="10" id="3bx-XE-Fid"/>
+                                        <constraint firstItem="rcn-Vf-8Gd" firstAttribute="width" secondItem="biG-Sy-of6" secondAttribute="width" multiplier="0.2" id="8cz-GW-kdh"/>
+                                        <constraint firstItem="fgN-gq-lw9" firstAttribute="width" secondItem="biG-Sy-of6" secondAttribute="width" multiplier="0.4" id="9Pf-xu-7ng"/>
+                                        <constraint firstItem="I03-5d-OPe" firstAttribute="leading" secondItem="rcn-Vf-8Gd" secondAttribute="trailing" constant="10" id="CNG-wT-oHp"/>
+                                        <constraint firstItem="I03-5d-OPe" firstAttribute="centerY" secondItem="biG-Sy-of6" secondAttribute="centerY" id="KEf-2T-pfF"/>
+                                        <constraint firstItem="rcn-Vf-8Gd" firstAttribute="centerY" secondItem="biG-Sy-of6" secondAttribute="centerY" id="frt-Eg-QWB"/>
+                                        <constraint firstItem="fgN-gq-lw9" firstAttribute="centerY" secondItem="biG-Sy-of6" secondAttribute="centerY" id="rO0-pO-ixZ"/>
+                                        <constraint firstItem="rcn-Vf-8Gd" firstAttribute="leading" secondItem="fgN-gq-lw9" secondAttribute="trailing" constant="10" id="ryH-Bj-HaP"/>
+                                        <constraint firstAttribute="trailing" secondItem="I03-5d-OPe" secondAttribute="trailing" constant="10" id="uoA-k2-HwK"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="boroughLabel" destination="rcn-Vf-8Gd" id="VsP-JC-7b4"/>
+                                    <outlet property="neighborhoodLabel" destination="I03-5d-OPe" id="zjw-BS-UpT"/>
+                                    <outlet property="schoolNameLabel" destination="fgN-gq-lw9" id="tz1-Wk-JOp"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WMV-FK-0rj" id="oaO-Fn-DPs"/>
+                            <outlet property="delegate" destination="WMV-FK-0rj" id="hsg-IN-ROI"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bI3-e9-srm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="166.66666666666669" y="49.553571428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
