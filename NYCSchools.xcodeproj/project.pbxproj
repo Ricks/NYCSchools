@@ -13,6 +13,12 @@
 		1D1F2F052658329D00FAA85C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D1F2F032658329D00FAA85C /* Main.storyboard */; };
 		1D1F2F07265832A000FAA85C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D1F2F06265832A000FAA85C /* Assets.xcassets */; };
 		1D1F2F0A265832A000FAA85C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D1F2F08265832A000FAA85C /* LaunchScreen.storyboard */; };
+		1D1F2F142658489900FAA85C /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1F2F132658489900FAA85C /* School.swift */; };
+		1D1F2F1D26584DA300FAA85C /* SchoolList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1F2F1C26584DA300FAA85C /* SchoolList.swift */; };
+		1D1F2F2126584F9D00FAA85C /* SAT_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D1F2F2026584F9D00FAA85C /* SAT_data.json */; };
+		1D1F2F272658504900FAA85C /* School_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D1F2F262658504900FAA85C /* School_data.json */; };
+		1D1F2F2D265858E900FAA85C /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1F2F2C265858E900FAA85C /* Result+Extensions.swift */; };
+		1D1F2F32265ABE6B00FAA85C /* SchoolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1F2F31265ABE6B00FAA85C /* SchoolModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		1D1F2F06265832A000FAA85C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D1F2F09265832A000FAA85C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D1F2F0B265832A000FAA85C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D1F2F132658489900FAA85C /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
+		1D1F2F1C26584DA300FAA85C /* SchoolList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolList.swift; sourceTree = "<group>"; };
+		1D1F2F2026584F9D00FAA85C /* SAT_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SAT_data.json; sourceTree = "<group>"; };
+		1D1F2F262658504900FAA85C /* School_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = School_data.json; sourceTree = "<group>"; };
+		1D1F2F2C265858E900FAA85C /* Result+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Result+Extensions.swift"; sourceTree = "<group>"; };
+		1D1F2F31265ABE6B00FAA85C /* SchoolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,35 @@
 		1D1F2EFC2658329D00FAA85C /* NYCSchools */ = {
 			isa = PBXGroup;
 			children = (
+				1D1F2F2A2658586700FAA85C /* App */,
+				1D1F2F122658333700FAA85C /* Models */,
+				1D1F2F292658582500FAA85C /* Util */,
+				1D1F2F2B2658589100FAA85C /* Resources */,
+			);
+			path = NYCSchools;
+			sourceTree = "<group>";
+		};
+		1D1F2F122658333700FAA85C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1D1F2F132658489900FAA85C /* School.swift */,
+				1D1F2F1C26584DA300FAA85C /* SchoolList.swift */,
+				1D1F2F31265ABE6B00FAA85C /* SchoolModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1D1F2F292658582500FAA85C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				1D1F2F2C265858E900FAA85C /* Result+Extensions.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		1D1F2F2A2658586700FAA85C /* App */ = {
+			isa = PBXGroup;
+			children = (
 				1D1F2EFD2658329D00FAA85C /* AppDelegate.swift */,
 				1D1F2EFF2658329D00FAA85C /* SceneDelegate.swift */,
 				1D1F2F012658329D00FAA85C /* ViewController.swift */,
@@ -64,7 +105,16 @@
 				1D1F2F08265832A000FAA85C /* LaunchScreen.storyboard */,
 				1D1F2F0B265832A000FAA85C /* Info.plist */,
 			);
-			path = NYCSchools;
+			path = App;
+			sourceTree = "<group>";
+		};
+		1D1F2F2B2658589100FAA85C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1D1F2F262658504900FAA85C /* School_data.json */,
+				1D1F2F2026584F9D00FAA85C /* SAT_data.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,8 +174,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D1F2F2126584F9D00FAA85C /* SAT_data.json in Resources */,
 				1D1F2F0A265832A000FAA85C /* LaunchScreen.storyboard in Resources */,
 				1D1F2F07265832A000FAA85C /* Assets.xcassets in Resources */,
+				1D1F2F272658504900FAA85C /* School_data.json in Resources */,
 				1D1F2F052658329D00FAA85C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,9 +189,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D1F2F2D265858E900FAA85C /* Result+Extensions.swift in Sources */,
 				1D1F2F022658329D00FAA85C /* ViewController.swift in Sources */,
 				1D1F2EFE2658329D00FAA85C /* AppDelegate.swift in Sources */,
 				1D1F2F002658329D00FAA85C /* SceneDelegate.swift in Sources */,
+				1D1F2F32265ABE6B00FAA85C /* SchoolModel.swift in Sources */,
+				1D1F2F1D26584DA300FAA85C /* SchoolList.swift in Sources */,
+				1D1F2F142658489900FAA85C /* School.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +344,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y2G9CL9C3G;
-				INFOPLIST_FILE = NYCSchools/Info.plist;
+				INFOPLIST_FILE = NYCSchools/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +363,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y2G9CL9C3G;
-				INFOPLIST_FILE = NYCSchools/Info.plist;
+				INFOPLIST_FILE = NYCSchools/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
