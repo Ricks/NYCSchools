@@ -10,6 +10,12 @@ import Foundation
 class SchoolList: Decodable {
     var schools = [School]()
 
+    let boroughMap = ["K": "Brooklyn",
+                      "M": "Manhattan",
+                      "Q": "Queens",
+                      "R": "Staten Island",
+                      "X": "The Bronx"]
+
     enum CodingKeys: String, CodingKey {
         case data
     }
@@ -27,7 +33,8 @@ class SchoolList: Decodable {
                 case 9:
                     school.name = try schoolDataContainer.decode(String.self)
                 case 10:
-                    school.boro = try schoolDataContainer.decode(String.self)
+                    let boroughCode = try schoolDataContainer.decode(String.self)
+                    school.borough = boroughMap[boroughCode] ?? "Unknown"
                 case 22:
                     school.neighborhood = try schoolDataContainer.decode(String.self)
                 case 30:

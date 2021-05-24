@@ -10,7 +10,7 @@ import Foundation
 struct School: Decodable {
     var name: String = ""
     var dbn: String = ""
-    var boro: String = ""
+    var borough: String = ""
     var neighborhood: String = ""
     var urlString: String = ""
     var numSATTestTakers: Int = 0

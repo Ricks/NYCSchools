@@ -17,27 +17,27 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SchoolTableViewCell" id="KGU-lq-uKM" customClass="SchoolTableViewCell" customModule="NYCSchools" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="29.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KGU-lq-uKM" id="biG-Sy-of6">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="29.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="School Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgN-gq-lw9">
-                                            <rect key="frame" x="10" y="11.5" width="165.5" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="School Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgN-gq-lw9">
+                                            <rect key="frame" x="10" y="6" width="165.5" height="17.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neighborhood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I03-5d-OPe">
-                                            <rect key="frame" x="278.5" y="11.5" width="125.5" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neighborhood" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I03-5d-OPe">
+                                            <rect key="frame" x="278.5" y="6" width="125.5" height="17.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Borough" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcn-Vf-8Gd">
-                                            <rect key="frame" x="185.5" y="11.5" width="83" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Borough" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcn-Vf-8Gd">
+                                            <rect key="frame" x="185.5" y="6" width="83" height="17.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -48,10 +48,16 @@
                                         <constraint firstItem="fgN-gq-lw9" firstAttribute="width" secondItem="biG-Sy-of6" secondAttribute="width" multiplier="0.4" id="9Pf-xu-7ng"/>
                                         <constraint firstItem="I03-5d-OPe" firstAttribute="leading" secondItem="rcn-Vf-8Gd" secondAttribute="trailing" constant="10" id="CNG-wT-oHp"/>
                                         <constraint firstItem="I03-5d-OPe" firstAttribute="centerY" secondItem="biG-Sy-of6" secondAttribute="centerY" id="KEf-2T-pfF"/>
+                                        <constraint firstItem="I03-5d-OPe" firstAttribute="top" secondItem="biG-Sy-of6" secondAttribute="top" constant="6" id="OnE-p7-Y0F"/>
+                                        <constraint firstItem="rcn-Vf-8Gd" firstAttribute="top" secondItem="biG-Sy-of6" secondAttribute="top" constant="6" id="cUO-j5-sUy"/>
+                                        <constraint firstAttribute="bottom" secondItem="rcn-Vf-8Gd" secondAttribute="bottom" constant="6" id="elJ-8N-Aid"/>
                                         <constraint firstItem="rcn-Vf-8Gd" firstAttribute="centerY" secondItem="biG-Sy-of6" secondAttribute="centerY" id="frt-Eg-QWB"/>
+                                        <constraint firstItem="fgN-gq-lw9" firstAttribute="top" secondItem="biG-Sy-of6" secondAttribute="top" constant="6" id="iUu-Tm-kSn"/>
                                         <constraint firstItem="fgN-gq-lw9" firstAttribute="centerY" secondItem="biG-Sy-of6" secondAttribute="centerY" id="rO0-pO-ixZ"/>
                                         <constraint firstItem="rcn-Vf-8Gd" firstAttribute="leading" secondItem="fgN-gq-lw9" secondAttribute="trailing" constant="10" id="ryH-Bj-HaP"/>
                                         <constraint firstAttribute="trailing" secondItem="I03-5d-OPe" secondAttribute="trailing" constant="10" id="uoA-k2-HwK"/>
+                                        <constraint firstAttribute="bottom" secondItem="I03-5d-OPe" secondAttribute="bottom" constant="6" id="wev-mg-aIX"/>
+                                        <constraint firstAttribute="bottom" secondItem="fgN-gq-lw9" secondAttribute="bottom" constant="6" id="yob-ID-XWs"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

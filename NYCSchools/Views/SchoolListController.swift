@@ -27,7 +27,7 @@ class SchoolListController: UITableViewController, Storyboarded {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SchoolTableViewCell", for: indexPath) as! SchoolTableViewCell
         let school = schoolModel.schools[indexPath.row]
         cell.schoolNameLabel.text = school.name
-        cell.boroughLabel.text = school.boro
+        cell.boroughLabel.text = school.borough
         cell.neighborhoodLabel.text = school.neighborhood
         return cell
     }
