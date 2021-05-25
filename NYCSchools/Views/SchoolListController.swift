@@ -7,29 +7,51 @@
 
 import UIKit
 
-class SchoolListController: UITableViewController, Storyboarded {
+class SchoolListController: UIViewController, UITableViewDataSource, UITableViewDelegate, Storyboarded {
 
     @IBOutlet var schoolTable: UITableView!
     let schoolModel = SchoolModel()
     weak var coordinator: MainCoordinator?
 
+    override func viewDidLoad() {
+        schoolModel.sortSchoolsByName()
+        schoolTable.reloadData()
+    }
+
     // MARK: - UITableViewDataSource
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return schoolModel.schools.count
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SchoolTableViewCell", for: indexPath) as! SchoolTableViewCell
         let school = schoolModel.schools[indexPath.row]
         cell.schoolNameLabel.text = school.name
         cell.boroughLabel.text = school.borough
         cell.neighborhoodLabel.text = school.neighborhood
         return cell
+    }
+
+    // MARK: - Button callbacks
+
+    @IBAction func schoolNameButtonPressed(_ sender: Any) {
+        schoolModel.sortSchoolsByName()
+        schoolTable.reloadData()
+    }
+
+    @IBAction func boroughButtonPressed(_ sender: Any) {
+        schoolModel.sortSchoolsByBorough()
+        schoolTable.reloadData()
+    }
+
+    @IBAction func neighborhoodButtonPressed(_ sender: Any) {
+        schoolModel.sortSchoolsByNeighborhood()
+        schoolTable.reloadData()
     }
 
 }

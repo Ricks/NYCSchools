@@ -3,84 +3,162 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--School List Controller-->
-        <scene sceneID="g4i-IQ-cgD">
+        <!--School List-->
+        <scene sceneID="1Mw-uA-BOS">
             <objects>
-                <tableViewController storyboardIdentifier="SchoolListController" id="WMV-FK-0rj" customClass="SchoolListController" customModule="NYCSchools" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wuy-FC-BIv">
+                <viewController storyboardIdentifier="SchoolListController" id="hkL-Ko-ydr" userLabel="School List" customClass="SchoolListController" customModule="NYCSchools" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uM8-xf-X5C">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SchoolTableViewCell" id="KGU-lq-uKM" customClass="SchoolTableViewCell" customModule="NYCSchools" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="29.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KGU-lq-uKM" id="biG-Sy-of6">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="29.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="School Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgN-gq-lw9">
-                                            <rect key="frame" x="10" y="6" width="165.5" height="17.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neighborhood" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I03-5d-OPe">
-                                            <rect key="frame" x="278.5" y="6" width="125.5" height="17.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Borough" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcn-Vf-8Gd">
-                                            <rect key="frame" x="185.5" y="6" width="83" height="17.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="fgN-gq-lw9" firstAttribute="leading" secondItem="biG-Sy-of6" secondAttribute="leading" constant="10" id="3bx-XE-Fid"/>
-                                        <constraint firstItem="rcn-Vf-8Gd" firstAttribute="width" secondItem="biG-Sy-of6" secondAttribute="width" multiplier="0.2" id="8cz-GW-kdh"/>
-                                        <constraint firstItem="fgN-gq-lw9" firstAttribute="width" secondItem="biG-Sy-of6" secondAttribute="width" multiplier="0.4" id="9Pf-xu-7ng"/>
-                                        <constraint firstItem="I03-5d-OPe" firstAttribute="leading" secondItem="rcn-Vf-8Gd" secondAttribute="trailing" constant="10" id="CNG-wT-oHp"/>
-                                        <constraint firstItem="I03-5d-OPe" firstAttribute="centerY" secondItem="biG-Sy-of6" secondAttribute="centerY" id="KEf-2T-pfF"/>
-                                        <constraint firstItem="I03-5d-OPe" firstAttribute="top" secondItem="biG-Sy-of6" secondAttribute="top" constant="6" id="OnE-p7-Y0F"/>
-                                        <constraint firstItem="rcn-Vf-8Gd" firstAttribute="top" secondItem="biG-Sy-of6" secondAttribute="top" constant="6" id="cUO-j5-sUy"/>
-                                        <constraint firstAttribute="bottom" secondItem="rcn-Vf-8Gd" secondAttribute="bottom" constant="6" id="elJ-8N-Aid"/>
-                                        <constraint firstItem="rcn-Vf-8Gd" firstAttribute="centerY" secondItem="biG-Sy-of6" secondAttribute="centerY" id="frt-Eg-QWB"/>
-                                        <constraint firstItem="fgN-gq-lw9" firstAttribute="top" secondItem="biG-Sy-of6" secondAttribute="top" constant="6" id="iUu-Tm-kSn"/>
-                                        <constraint firstItem="fgN-gq-lw9" firstAttribute="centerY" secondItem="biG-Sy-of6" secondAttribute="centerY" id="rO0-pO-ixZ"/>
-                                        <constraint firstItem="rcn-Vf-8Gd" firstAttribute="leading" secondItem="fgN-gq-lw9" secondAttribute="trailing" constant="10" id="ryH-Bj-HaP"/>
-                                        <constraint firstAttribute="trailing" secondItem="I03-5d-OPe" secondAttribute="trailing" constant="10" id="uoA-k2-HwK"/>
-                                        <constraint firstAttribute="bottom" secondItem="I03-5d-OPe" secondAttribute="bottom" constant="6" id="wev-mg-aIX"/>
-                                        <constraint firstAttribute="bottom" secondItem="fgN-gq-lw9" secondAttribute="bottom" constant="6" id="yob-ID-XWs"/>
-                                    </constraints>
-                                </tableViewCellContentView>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wuy-FC-BIv" userLabel="School Table">
+                                <rect key="frame" x="0.0" y="74" width="414" height="788"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SchoolTableViewCell" id="KGU-lq-uKM" customClass="SchoolTableViewCell" customModule="NYCSchools" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="29.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KGU-lq-uKM" translatesAutoresizingMaskIntoConstraints="NO" id="biG-Sy-of6">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="29.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="School Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgN-gq-lw9">
+                                                    <rect key="frame" x="10" y="6" width="165.5" height="17.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZnL-MA-pcx" userLabel="Borough Name Label">
+                                                    <rect key="frame" x="185.5" y="6" width="83" height="17.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Qw-Od-QGu" userLabel="Neighborhood Label">
+                                                    <rect key="frame" x="278.5" y="6" width="125.5" height="17.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZnL-MA-pcx" firstAttribute="leading" secondItem="fgN-gq-lw9" secondAttribute="trailing" constant="10" id="748-rG-KzL"/>
+                                                <constraint firstAttribute="bottom" secondItem="ZnL-MA-pcx" secondAttribute="bottom" constant="6" id="ASi-Ho-WjM"/>
+                                                <constraint firstAttribute="bottom" secondItem="7Qw-Od-QGu" secondAttribute="bottom" constant="6" id="KhG-q0-tpN"/>
+                                                <constraint firstItem="7Qw-Od-QGu" firstAttribute="leading" secondItem="ZnL-MA-pcx" secondAttribute="trailing" constant="10" id="Uur-zZ-lSG"/>
+                                                <constraint firstItem="ZnL-MA-pcx" firstAttribute="width" secondItem="biG-Sy-of6" secondAttribute="width" multiplier="0.2" id="Zn3-DE-XkP"/>
+                                                <constraint firstItem="ZnL-MA-pcx" firstAttribute="top" secondItem="biG-Sy-of6" secondAttribute="top" constant="6" id="baQ-7p-vye"/>
+                                                <constraint firstItem="7Qw-Od-QGu" firstAttribute="top" secondItem="biG-Sy-of6" secondAttribute="top" constant="6" id="qEd-HL-RAg"/>
+                                                <constraint firstItem="fgN-gq-lw9" firstAttribute="top" secondItem="biG-Sy-of6" secondAttribute="top" constant="6" id="qtO-vf-dIA"/>
+                                                <constraint firstAttribute="bottom" secondItem="fgN-gq-lw9" secondAttribute="bottom" constant="6" id="uF2-sg-PEl"/>
+                                                <constraint firstAttribute="trailing" secondItem="7Qw-Od-QGu" secondAttribute="trailing" constant="10" id="vAt-aZ-6Dw"/>
+                                                <constraint firstItem="fgN-gq-lw9" firstAttribute="leading" secondItem="biG-Sy-of6" secondAttribute="leading" constant="10" id="xDY-td-WYO"/>
+                                                <constraint firstItem="fgN-gq-lw9" firstAttribute="width" secondItem="biG-Sy-of6" secondAttribute="width" multiplier="0.4" id="yA2-WB-xIl"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="biG-Sy-of6" firstAttribute="leading" secondItem="KGU-lq-uKM" secondAttribute="leading" id="hlL-g4-DcI"/>
+                                            <constraint firstItem="biG-Sy-of6" firstAttribute="top" secondItem="KGU-lq-uKM" secondAttribute="top" id="pg3-uE-SaG"/>
+                                            <constraint firstAttribute="bottom" secondItem="biG-Sy-of6" secondAttribute="bottom" id="w42-Fl-pi6"/>
+                                            <constraint firstAttribute="trailing" secondItem="biG-Sy-of6" secondAttribute="trailing" id="yIg-I0-lRW"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="boroughLabel" destination="ZnL-MA-pcx" id="zeb-FT-EgD"/>
+                                            <outlet property="neighborhoodLabel" destination="7Qw-Od-QGu" id="7Mz-eO-Puh"/>
+                                            <outlet property="schoolNameLabel" destination="fgN-gq-lw9" id="tz1-Wk-JOp"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
-                                    <outlet property="boroughLabel" destination="rcn-Vf-8Gd" id="VsP-JC-7b4"/>
-                                    <outlet property="neighborhoodLabel" destination="I03-5d-OPe" id="zjw-BS-UpT"/>
-                                    <outlet property="schoolNameLabel" destination="fgN-gq-lw9" id="tz1-Wk-JOp"/>
+                                    <outlet property="dataSource" destination="hkL-Ko-ydr" id="eId-8v-Oh8"/>
+                                    <outlet property="delegate" destination="hkL-Ko-ydr" id="BOh-wa-2V1"/>
                                 </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="WMV-FK-0rj" id="oaO-Fn-DPs"/>
-                            <outlet property="delegate" destination="WMV-FK-0rj" id="hsg-IN-ROI"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bI3-e9-srm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HmT-Fx-AL6" userLabel="Button View">
+                                <rect key="frame" x="0.0" y="44" width="414" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJE-qv-n9X">
+                                        <rect key="frame" x="10" y="6" width="165.5" height="18"/>
+                                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="School Name">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="schoolNameButtonPressed:" destination="hkL-Ko-ydr" eventType="touchUpInside" id="UJb-1V-fEf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvC-m0-nwA" userLabel="Borough">
+                                        <rect key="frame" x="185.5" y="6" width="83" height="18"/>
+                                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="Borough">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="boroughButtonPressed:" destination="hkL-Ko-ydr" eventType="touchUpInside" id="6qO-ee-uWj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJj-qv-7Gb" userLabel="Neighborhood">
+                                        <rect key="frame" x="278.5" y="6" width="125.5" height="18"/>
+                                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="Neighborhood">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="neighborhoodButtonPressed:" destination="hkL-Ko-ydr" eventType="touchUpInside" id="7pF-RX-Kwh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="jvC-m0-nwA" firstAttribute="top" secondItem="HmT-Fx-AL6" secondAttribute="top" constant="6" id="2Jg-IV-f5B"/>
+                                    <constraint firstAttribute="bottom" secondItem="jvC-m0-nwA" secondAttribute="bottom" constant="6" id="3cg-yr-nSi"/>
+                                    <constraint firstItem="hJE-qv-n9X" firstAttribute="width" secondItem="HmT-Fx-AL6" secondAttribute="width" multiplier="0.4" id="9L4-SZ-ZKP"/>
+                                    <constraint firstItem="gJj-qv-7Gb" firstAttribute="leading" secondItem="jvC-m0-nwA" secondAttribute="trailing" constant="10" id="FdG-uH-Fhn"/>
+                                    <constraint firstItem="jvC-m0-nwA" firstAttribute="width" secondItem="HmT-Fx-AL6" secondAttribute="width" multiplier="0.2" id="KJ9-z5-1ny"/>
+                                    <constraint firstItem="hJE-qv-n9X" firstAttribute="top" secondItem="HmT-Fx-AL6" secondAttribute="top" constant="6" id="Q6Y-KZ-4hK"/>
+                                    <constraint firstItem="jvC-m0-nwA" firstAttribute="leading" secondItem="hJE-qv-n9X" secondAttribute="trailing" constant="10" id="VEX-J1-ypk"/>
+                                    <constraint firstAttribute="bottom" secondItem="gJj-qv-7Gb" secondAttribute="bottom" constant="6" id="aZp-kf-cee"/>
+                                    <constraint firstItem="gJj-qv-7Gb" firstAttribute="top" secondItem="HmT-Fx-AL6" secondAttribute="top" constant="6" id="bXe-Ch-jJC"/>
+                                    <constraint firstAttribute="bottom" secondItem="hJE-qv-n9X" secondAttribute="bottom" constant="6" id="cTe-oX-3OJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="gJj-qv-7Gb" secondAttribute="trailing" constant="10" id="oSh-9S-rXw"/>
+                                    <constraint firstAttribute="height" constant="30" id="psE-i8-G2V"/>
+                                    <constraint firstItem="hJE-qv-n9X" firstAttribute="leading" secondItem="HmT-Fx-AL6" secondAttribute="leading" constant="10" id="wFj-lz-oCX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oln-5R-dhp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HmT-Fx-AL6" firstAttribute="leading" secondItem="oln-5R-dhp" secondAttribute="leading" id="0gC-B2-9No"/>
+                            <constraint firstItem="wuy-FC-BIv" firstAttribute="leading" secondItem="oln-5R-dhp" secondAttribute="leading" id="FSz-qa-xfR"/>
+                            <constraint firstItem="oln-5R-dhp" firstAttribute="bottom" secondItem="wuy-FC-BIv" secondAttribute="bottom" id="FfY-GH-G75"/>
+                            <constraint firstItem="HmT-Fx-AL6" firstAttribute="top" secondItem="oln-5R-dhp" secondAttribute="top" id="NjW-9H-z9o"/>
+                            <constraint firstItem="wuy-FC-BIv" firstAttribute="top" secondItem="HmT-Fx-AL6" secondAttribute="bottom" id="TSI-qu-LcP"/>
+                            <constraint firstItem="oln-5R-dhp" firstAttribute="trailing" secondItem="wuy-FC-BIv" secondAttribute="trailing" id="fOr-ho-SiF"/>
+                            <constraint firstItem="oln-5R-dhp" firstAttribute="trailing" secondItem="HmT-Fx-AL6" secondAttribute="trailing" id="gis-wN-fqg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="schoolTable" destination="wuy-FC-BIv" id="Ez7-vZ-MVd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zng-7o-Gol" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="166.66666666666669" y="49.553571428571423"/>
+            <point key="canvasLocation" x="-1200" y="-108"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

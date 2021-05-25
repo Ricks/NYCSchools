@@ -55,4 +55,23 @@ class SchoolModel {
             schools[i].avgSATMathScore = schoolSATDict[schools[i].dbn]?.avgSATMathScore ?? 0
         }
     }
+
+    func sortSchoolsByName() {
+        schools.sort { (lhs, rhs) -> Bool in
+            return lhs.name < rhs.name
+        }
+    }
+
+    func sortSchoolsByNeighborhood() {
+        schools.sort { (lhs, rhs) -> Bool in
+            return (lhs.neighborhood, lhs.name) < (rhs.neighborhood, rhs.name)
+        }
+    }
+
+    func sortSchoolsByBorough() {
+        return schools.sort { (lhs, rhs) -> Bool in
+            return (lhs.borough, lhs.neighborhood, lhs.name) < (rhs.borough, rhs.neighborhood, rhs.name)
+        }
+    }
+
 }
