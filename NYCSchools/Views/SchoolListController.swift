@@ -36,6 +36,11 @@ class SchoolListController: UIViewController, UITableViewDataSource, UITableView
         cell.neighborhoodLabel.text = school.neighborhood
         return cell
     }
+    // MARK: - UITableViewDelegate
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        coordinator?.schoolSelected(schoolModel.schools[indexPath.row])
+    }
 
     // MARK: - Button callbacks
 

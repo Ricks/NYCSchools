@@ -13,8 +13,8 @@ struct School: Decodable {
     var borough: String = ""
     var neighborhood: String = ""
     var urlString: String = ""
-    var numSATTestTakers: Int = 0
-    var avgSATCriticalReadingScore: Int = 0
-    var avgSATWritingScore: Int = 0
-    var avgSATMathScore: Int = 0
+    var numSATTestTakers: Int?
+    var avgSATReadingScore: Int?
+    var avgSATWritingScore: Int?
+    var avgSATMathScore: Int?
 }

@@ -22,5 +22,12 @@ class MainCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: false)
     }
 
+    func schoolSelected(_ school: School) {
+        let vc = SchoolDetailController.instantiate()
+        vc.school = school
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
+
 }
 

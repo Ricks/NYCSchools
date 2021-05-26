@@ -23,8 +23,9 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SchoolTableViewCell" id="KGU-lq-uKM" customClass="SchoolTableViewCell" customModule="NYCSchools" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="29.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KGU-lq-uKM" translatesAutoresizingMaskIntoConstraints="NO" id="biG-Sy-of6">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KGU-lq-uKM" id="biG-Sy-of6">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="29.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="School Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgN-gq-lw9">
                                                     <rect key="frame" x="10" y="6" width="165.5" height="17.5"/>
@@ -144,6 +145,7 @@
                             <constraint firstItem="oln-5R-dhp" firstAttribute="trailing" secondItem="HmT-Fx-AL6" secondAttribute="trailing" id="gis-wN-fqg"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="School List" id="qbO-Sp-aGZ"/>
                     <connections>
                         <outlet property="schoolTable" destination="wuy-FC-BIv" id="Ez7-vZ-MVd"/>
                     </connections>

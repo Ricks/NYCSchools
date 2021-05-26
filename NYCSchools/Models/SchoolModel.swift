@@ -49,10 +49,10 @@ class SchoolModel {
             schoolSATDict[school.dbn] = school
         }
         for i in 0 ..< schools.count {
-            schools[i].numSATTestTakers = schoolSATDict[schools[i].dbn]?.numSATTestTakers ?? 0
-            schools[i].avgSATCriticalReadingScore = schoolSATDict[schools[i].dbn]?.avgSATCriticalReadingScore ?? 0
-            schools[i].avgSATWritingScore = schoolSATDict[schools[i].dbn]?.avgSATWritingScore ?? 0
-            schools[i].avgSATMathScore = schoolSATDict[schools[i].dbn]?.avgSATMathScore ?? 0
+            schools[i].numSATTestTakers = schoolSATDict[schools[i].dbn]?.numSATTestTakers
+            schools[i].avgSATReadingScore = schoolSATDict[schools[i].dbn]?.avgSATReadingScore
+            schools[i].avgSATWritingScore = schoolSATDict[schools[i].dbn]?.avgSATWritingScore
+            schools[i].avgSATMathScore = schoolSATDict[schools[i].dbn]?.avgSATMathScore
         }
     }
 

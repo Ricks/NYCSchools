@@ -28,8 +28,8 @@ class SchoolSATList: Decodable {
                     let numSATTestTakersStr = try schoolDataContainer.decode(String.self)
                     school.numSATTestTakers = Int(numSATTestTakersStr) ?? 0
                 case 11:
-                    let avgSATCriticalReadingScoreStr = try schoolDataContainer.decode(String.self)
-                    school.avgSATCriticalReadingScore = Int(avgSATCriticalReadingScoreStr) ?? 0
+                    let avgSATReadingScoreStr = try schoolDataContainer.decode(String.self)
+                    school.avgSATReadingScore = Int(avgSATReadingScoreStr) ?? 0
                 case 12:
                     let avgSATMathScoreStr = try schoolDataContainer.decode(String.self)
                     school.avgSATMathScore = Int(avgSATMathScoreStr) ?? 0
