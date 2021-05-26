@@ -30,7 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1D1F2EFA2658329D00FAA85C /* NYCSchools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYCSchools.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D1F2EFA2658329D00FAA85C /* 20210525-RichardClark-NYCSchools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "20210525-RichardClark-NYCSchools.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D1F2EFD2658329D00FAA85C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D1F2EFF2658329D00FAA85C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1D1F2F06265832A000FAA85C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 		1D1F2EFB2658329D00FAA85C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D1F2EFA2658329D00FAA85C /* NYCSchools.app */,
+				1D1F2EFA2658329D00FAA85C /* 20210525-RichardClark-NYCSchools.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,9 +160,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D1F2EF92658329D00FAA85C /* NYCSchools */ = {
+		1D1F2EF92658329D00FAA85C /* 20210525-RichardClark-NYCSchools */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D1F2F0E265832A000FAA85C /* Build configuration list for PBXNativeTarget "NYCSchools" */;
+			buildConfigurationList = 1D1F2F0E265832A000FAA85C /* Build configuration list for PBXNativeTarget "20210525-RichardClark-NYCSchools" */;
 			buildPhases = (
 				1D1F2EF62658329D00FAA85C /* Sources */,
 				1D1F2EF72658329D00FAA85C /* Frameworks */,
@@ -172,9 +172,9 @@
 			);
 			dependencies = (
 			);
-			name = NYCSchools;
+			name = "20210525-RichardClark-NYCSchools";
 			productName = NYCSchools;
-			productReference = 1D1F2EFA2658329D00FAA85C /* NYCSchools.app */;
+			productReference = 1D1F2EFA2658329D00FAA85C /* 20210525-RichardClark-NYCSchools.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -191,7 +191,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1D1F2EF52658329D00FAA85C /* Build configuration list for PBXProject "NYCSchools" */;
+			buildConfigurationList = 1D1F2EF52658329D00FAA85C /* Build configuration list for PBXProject "20210525-RichardClark-NYCSchools" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -204,7 +204,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D1F2EF92658329D00FAA85C /* NYCSchools */,
+				1D1F2EF92658329D00FAA85C /* 20210525-RichardClark-NYCSchools */,
 			);
 		};
 /* End PBXProject section */
@@ -418,7 +418,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D1F2EF52658329D00FAA85C /* Build configuration list for PBXProject "NYCSchools" */ = {
+		1D1F2EF52658329D00FAA85C /* Build configuration list for PBXProject "20210525-RichardClark-NYCSchools" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D1F2F0C265832A000FAA85C /* Debug */,
@@ -427,7 +427,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1D1F2F0E265832A000FAA85C /* Build configuration list for PBXNativeTarget "NYCSchools" */ = {
+		1D1F2F0E265832A000FAA85C /* Build configuration list for PBXNativeTarget "20210525-RichardClark-NYCSchools" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D1F2F0F265832A000FAA85C /* Debug */,
